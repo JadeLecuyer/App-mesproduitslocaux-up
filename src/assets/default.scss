@@ -1,0 +1,45 @@
+.modal-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $muted-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-window {
+    background: $white;
+    box-shadow: $modal-shadow;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    @media screen and (min-width: #{$phone}) {
+        width: 60%;
+        max-height: 80%;
+    }
+}
+
+.btn-custom-primary {
+    color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover {
+        color: $white;
+        background-color: darken($primary-color, 3%);
+        border-color: darken($primary-color, 3%);
+    }
+}
+
+.ajs-button {
+    //@extend .btn;
+    border: solid 1px $primary-color;
+    border-radius: 0.2rem;
+    font-weight: 400;
+    @extend .btn-custom-primary;
+}
